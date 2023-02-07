@@ -1,0 +1,61 @@
+@import "./general.scss";
+
+.landing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../assets/bg.png");
+  border-bottom: 4px solid $dark-color;
+
+  .container {
+    background-color: $dark-color;
+    border: 16px solid $light-color;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 8em 2em;
+    margin: 80px;
+    width: 100%;
+    color: $light-color;
+
+    h1 {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .text {
+      text-align: end;
+
+      p {
+        border-bottom: 4px solid $light-color;
+        border-right: 4px solid $light-color;
+        padding: 8px 16px;
+      }
+    }
+  }
+}
+
+.company{
+    .pic{
+        background-image: url("../assets/bg.png");
+        height: 10em;
+        width: 100%;
+        border: 4px solid $dark-color;
+        margin: 5em 0;
+    }
+}
+
+@media screen and (max-width: $mobile-width) {
+  .landing {
+    .container {
+      flex-direction: column;
+      margin: 8px;
+
+      .text {
+        text-align: start;
+        padding-top: 16px;
+      }
+    }
+  }
+}

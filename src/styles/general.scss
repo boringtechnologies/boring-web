@@ -1,0 +1,66 @@
+$dark-color: black;
+$light-color: white;
+$primary-color: blue;
+$mobile-width: 980px;
+
+@font-face {
+  font-family: "Raleway-Title";
+  src: url("../assets/Raleway/static/Raleway-Black.ttf");
+}
+
+@font-face {
+  font-family: "Roboto-reg";
+  src: url("../assets/Roboto_Condensed/RobotoCondensed-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Roboto-light";
+  src: url("../assets/Roboto_Condensed/RobotoCondensed-Light.ttf");
+}
+
+*,
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+h1, .big {
+  font-family: "Raleway-Title";
+  font-size: 6vw;
+}
+
+h2,
+h3,
+h4 {
+  font-family: "Roboto-reg";
+  font-size: 4vw;
+}
+
+p {
+  font-family: "Roboto-light";
+  font-size: 2vw;
+}
+
+.section {
+  min-height: 100vh;
+  width: 100%;
+  padding: 2em;
+}
+
+@media screen and (max-width: $mobile-width) {
+  h1, .big {
+    font-size: 40px;
+  }
+
+  h2,
+  h3,
+  h4 {
+    font-size: 32px;
+  }
+
+  p {
+    font-size: 24px;
+  }
+}
