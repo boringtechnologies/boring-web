@@ -5,7 +5,8 @@
   justify-content: center;
   align-items: center;
   background-image: url("../assets/bg.png");
-  border-bottom: 4px solid $dark-color;
+  background-attachment: fixed;
+  border-bottom: $border-size solid $dark-color;
 
   .container {
     background-color: $dark-color;
@@ -28,8 +29,8 @@
       text-align: end;
 
       p {
-        border-bottom: 4px solid $light-color;
-        border-right: 4px solid $light-color;
+        border-bottom: $border-size solid $light-color;
+        border-right: $border-size solid $light-color;
         padding: 8px 16px;
       }
     }
@@ -39,10 +40,27 @@
 .company {
   .pic {
     background-image: url("../assets/bg.png");
+    background-attachment: fixed;
     height: 10em;
     width: 100%;
-    border: 4px solid $dark-color;
-    margin: 5em 0;
+    border: $border-size solid $dark-color;
+    padding: 5em 0;
+  }
+
+  .part {
+    display: flex;
+    height: fit-content;
+
+    .text{
+      width: 60%;
+    }
+
+    .secpic {
+      width: 40%;
+      background-image: url("../assets/bg.png");
+      border: $border-size solid $dark-color;
+      border-top: 0px;
+    }
   }
 }
 
@@ -53,17 +71,17 @@
     .part-one {
       display: flex;
       height: fit-content;
-      border: 8px solid $dark-color;
+      border: $border-size solid $dark-color;
       border-bottom: 0px;
 
       .pic {
         width: 40%;
         background-image: url("../assets/bg.png");
-        border-right: 8px solid $dark-color;
+        border-right: $border-size solid $dark-color;
 
         &.reverse {
           border-right: 0px;
-          border-left: 8px solid $dark-color;
+          border-left: $border-size solid $dark-color;
         }
       }
 
@@ -87,7 +105,7 @@
 
     .part-two {
       padding: 1em;
-      border: 8px solid $dark-color;
+      border: $border-size solid $dark-color;
     }
   }
 }
@@ -101,6 +119,21 @@
       .text {
         text-align: start;
         padding-top: 16px;
+      }
+    }
+  }
+
+  .company{
+    .part{
+      flex-direction: column;
+
+      .text, .secpic{
+        width: 100%;
+      }
+
+      .secpic{
+        height: 16em;
+        border-top: $border-size solid $dark-color;
       }
     }
   }
