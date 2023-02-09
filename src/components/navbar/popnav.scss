@@ -15,7 +15,7 @@
 
   .navlinkStyle {
     text-decoration: none;
-    color: $primary-color;
+    color: $dark-color;
     position: relative;
     font-size: 20px;
     font-weight: bold;
@@ -23,6 +23,7 @@
     &:hover,
     &:focus {
       color: $light-color;
+      background-color: $dark-color;
     }
   }
 }
@@ -44,7 +45,7 @@
     height: 100%;
     margin: 0;
     padding: 0;
-    background-color: $dark-color;
+    background-color: $light-color;
 
     &.open {
       transform: translateX(0);

@@ -4,7 +4,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("../assets/bg.png");
+  background-image: url("../assets/textured-liquid-bg.JPG");
   background-attachment: fixed;
   border-bottom: $border-size solid $dark-color;
 
@@ -38,8 +38,11 @@
 }
 
 .company {
+  background-image: url("../assets/bg-one.jpg");
+  background-size: contain;
+
   .pic {
-    background-image: url("../assets/bg.png");
+    background-image: url("../assets/liquid-bg.JPG");
     background-attachment: fixed;
     height: 10em;
     width: 100%;
@@ -65,6 +68,7 @@
 }
 
 .team {
+  background-color: $light-color;
   .member {
     margin: 8em 0;
 
@@ -73,6 +77,7 @@
       height: fit-content;
       border: $border-size solid $dark-color;
       border-bottom: 0px;
+      background-color: white;
 
       .pic {
         width: 40%;
@@ -104,6 +109,7 @@
     }
 
     .part-two {
+      background-color: white;
       padding: 1em;
       border: $border-size solid $dark-color;
     }

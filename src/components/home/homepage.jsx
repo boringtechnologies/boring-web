@@ -5,7 +5,7 @@ import AboutTeam from './aboutTeam.jsx';
 
 function Homepage() {
   return (
-    <div>Homepage
+    <div>
       <Landing />
       <AboutCo />
       <AboutTeam />

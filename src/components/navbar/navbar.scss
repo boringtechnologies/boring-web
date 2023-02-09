@@ -7,25 +7,27 @@
   justify-content: space-between;
   position: fixed;
   width: 100vw;
-  // background-color: $dark-color;
+  height: 40px;
+  background-color: $light-color;
   z-index: 100;
   padding: 24px 0;
+  border-bottom: $border-size solid $dark-color;
 
-  &::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, black, black, transparent);
-  }
+  // &::before{
+  //   content: '';
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 100%;
+  //   background: linear-gradient(to bottom, black, black, transparent);
+  // }
 
 
   .logo {
     width: 10%;
-    height: 50px;
-    // background: url("../../assets/logo.svg") center center no-repeat;
+    height: 40px;
+    background: url("../../assets/boring_logo_dark.png") center center no-repeat;
     background-size: contain;
     z-index: 100;
     margin-left: 24px;

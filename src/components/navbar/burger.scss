@@ -20,8 +20,8 @@
 
     div {
       width: 40px;
-      height: 4px;
-      background-color: $light-color;
+      height: 8px;
+      background-color: $dark-color;
       border-radius: 10px;
       transform-origin: 1px;
       transition: all 0.3s linear;
@@ -29,7 +29,7 @@
 
     &.open {
       div {
-        background-color: $primary-color;
+        background-color: $dark-color;
         &:nth-child(1) {
           transform: rotate(45deg);
         }
