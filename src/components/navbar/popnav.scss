@@ -8,6 +8,7 @@
   justify-content: space-around;
   width: 100%;
   z-index: 19;
+  overflow: visible;
 
   * {
     background-color: transparent;
@@ -24,6 +25,21 @@
     &:focus {
       color: $light-color;
       background-color: $dark-color;
+      cursor: pointer;
+    }
+  }
+
+  .submenubtn{
+    position: relative;
+  }
+  .submenu{
+    list-style: none;
+    position: absolute;
+    top: 56px;
+    background-color: $light-color;
+    
+    li{
+      padding: 8px 16px;
     }
   }
 }
@@ -57,6 +73,10 @@
 
     .mobileOnly {
       display: flex;
+    }
+
+    .desktopOnly{
+      display: none;
     }
 
     li {

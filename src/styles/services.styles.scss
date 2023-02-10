@@ -1,0 +1,80 @@
+@import "./general.scss";
+
+.web {
+  .first {
+    background-image: url("../assets/bg-one.jpg");
+    background-position: top;
+    padding: 80px 2em;
+
+    .title {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 1em 0.5em;
+      border: $border-size solid $dark-color;
+      width: fit-content;
+
+      h1 {
+        padding-right: 1em;
+      }
+    }
+
+    .intro {
+      border: $border-size solid $dark-color;
+      padding: 2em;
+      background-color: white;
+      text-align: justify;
+      margin: 2em 0px;
+    }
+  }
+
+  .list {
+    background-image: url("../assets/textured-liquid-bg.JPG");
+    background-attachment: fixed;
+    border-top: $border-size solid $dark-color;
+    border-bottom: $border-size solid $dark-color;
+
+    h2 {
+      width: 100%;
+      padding: 0.5em;
+      background-color: $dark-color;
+      color: $light-color;
+      border: $border-size solid $light-color;
+    }
+
+    ul {
+      li {
+        display: flex;
+        height: fit-content;
+        margin: 2em 0;
+        border: $border-size solid $dark-color;
+
+        .text {
+          padding: 2em 1em;
+          background-color: white;
+
+          &#left {
+            text-align: right;
+          }
+        }
+
+        .pic {
+          background-image: url("../assets/bg-one.jpg");
+          width: 100%;
+          border-left: $border-size solid $dark-color;
+
+          &#left {
+            border-right: $border-size solid $dark-color;
+            border-left: 0px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mobile-width) {
+  .web {
+    padding-top: 0px;
+  }
+}

@@ -24,22 +24,25 @@ html {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  overflow-x: hidden;
+  // overflow-x: hidden;
 }
 
-h1, .big {
+h1,
+.big {
   font-family: "Raleway-Title";
   font-size: 6vw;
 }
 
 h2,
 h3,
-h4 {
+h4,
+.medium {
   font-family: "Roboto-reg";
   font-size: 4vw;
 }
 
-p {
+p,
+li {
   font-family: "Roboto-light";
   font-size: 2vw;
 }
@@ -48,10 +51,16 @@ p {
   min-height: 100vh;
   width: 100%;
   padding: 2em;
+  background-color: $light-color;
+}
+
+.border {
+  border: $border-size solid $dark-color;
 }
 
 @media screen and (max-width: $mobile-width) {
-  h1, .big {
+  h1,
+  .big {
     font-size: 40px;
   }
 

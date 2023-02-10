@@ -6,8 +6,7 @@
   align-items: center;
   background-image: url("../assets/textured-liquid-bg.JPG");
   background-attachment: fixed;
-  border-bottom: $border-size solid $dark-color;
-
+  
   .container {
     background-color: $dark-color;
     border: 16px solid $light-color;
@@ -42,7 +41,7 @@
   background-size: contain;
 
   .pic {
-    background-image: url("../assets/liquid-bg.JPG");
+    background-image: url("../assets/textured-liquid-bg.JPG");
     background-attachment: fixed;
     height: 10em;
     width: 100%;

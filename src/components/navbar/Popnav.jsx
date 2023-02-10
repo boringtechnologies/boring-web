@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./popnav.scss";
 
@@ -10,8 +11,11 @@ import "./popnav.scss";
  */
 
 const Popnav = ({ open, setOpen }) => {
+  const [submenuOpen, setSubmenuOpen] = useState(false);
+
   const handleClick = () => {
     setOpen(false);
+    setSubmenuOpen(false);
   };
 
   return (
@@ -25,9 +29,28 @@ const Popnav = ({ open, setOpen }) => {
           HOME
         </Link>
       </li>
+      <li
+        className="navlinkStyle submenubtn desktopOnly"
+        onClick={() => setSubmenuOpen(!submenuOpen)}
+      >
+        OUR SERVICES
+      </li>
       <li>
-        <Link to="/FAQ" className="navlinkStyle" onClick={() => handleClick()}>
-          FAQ
+        <Link
+          to="/service/web"
+          className="navlinkStyle mobileOnly"
+          onClick={() => handleClick()}
+        >
+          WEB DEVELOPMENT
+        </Link>
+      </li>
+      <li>
+        <Link
+          to="/service/software"
+          className="navlinkStyle mobileOnly"
+          onClick={() => handleClick()}
+        >
+          SOFTWARE DEVELOPMENT
         </Link>
       </li>
       <li>
@@ -39,6 +62,28 @@ const Popnav = ({ open, setOpen }) => {
           CONTACT US
         </Link>
       </li>
+      {submenuOpen && (
+        <ul className="submenu desktopOnly">
+          <li>
+            <Link
+              to="/service/web"
+              className="navlinkStyle"
+              onClick={() => handleClick()}
+            >
+              WEB DEVELOPMENT
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/service/software"
+              className="navlinkStyle"
+              onClick={() => handleClick()}
+            >
+              SOFTWARE DEVELOPMENT
+            </Link>
+          </li>
+        </ul>
+      )}
     </ul>
   );
 };
