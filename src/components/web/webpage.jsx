@@ -14,7 +14,7 @@ function Webpage() {
       <div className="first">
         <div className="title">
           <h1>WEB PROJECT</h1>
-          <div className="side">
+          <div className="side web-only">
             <p data-aos="fade-down">web development</p>
             <p data-aos="fade-down" data-aos-delay="500">
               web design
@@ -84,7 +84,6 @@ function Webpage() {
                 running smoothly and securely.
               </p>
             </div>
-
             <div className="pic"></div>
           </li>
         </ul>
@@ -94,18 +93,20 @@ function Webpage() {
           <div className="pic"></div>
           <div className="side">
             <p id="text">
-              At <span id="name">Boring Technologies</span>, we pride ourselves
-              on creating high-quality websites that will help you achieve your
-              business goals.{" "}
-              <Link to="/" className="medium">
+              At <span className="medium">Boring Technologies</span>, we pride
+              ourselves on creating high-quality websites that will help you
+              achieve your business goals.{" "}
+              <Link to="/contact" id="name">
                 Contact us
               </Link>{" "}
               today to start building your dream website!
             </p>
             <div className="button">
-              <p>here</p>
-              <button>Tell Us More</button>
-              <p>here</p>
+              <p className="web-only">here</p>
+              <Link to="/contact" id="name">
+                <button>Tell Us More</button>
+              </Link>
+              <p className="web-only">here</p>
             </div>
           </div>
         </div>
