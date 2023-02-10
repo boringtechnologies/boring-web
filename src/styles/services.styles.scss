@@ -71,6 +71,75 @@
       }
     }
   }
+
+  .conclusion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .container {
+      display: flex;
+      border: $border-size solid $dark-color;
+      height: 40em;
+
+      .side {
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        #text {
+          padding: 1em;
+
+          #name {
+            background-color: $dark-color;
+            color: $light-color;
+            padding: 0 0.5em;
+          }
+
+          .medium {
+            text-decoration: none;
+            color: $dark-color;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+
+        .button {
+          background-color: $dark-color;
+          height: 30%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: $light-color;
+
+          button {
+            padding: 8px 16px;
+            margin: 0 1em;
+            border: $border-size solid $light-color;
+            background-color: $dark-color;
+            color: $light-color;
+
+            &:hover {
+              cursor: pointer;
+              border: $border-size solid $light-color;
+              color: $dark-color;
+              background-color: $light-color;
+            }
+          }
+        }
+      }
+
+      .pic {
+        background-image: url("../assets/liquid-bg.JPG");
+        width: 40%;
+        height: 100%;
+        border-right: $border-size solid $dark-color;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: $mobile-width) {
