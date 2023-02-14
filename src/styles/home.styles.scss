@@ -72,7 +72,7 @@
 
 .team {
   background-color: $light-color;
-  
+
   .member {
     margin: 8em 0;
 
@@ -151,6 +151,32 @@
       .secpic {
         height: 16em;
         border-top: $border-size solid $dark-color;
+      }
+    }
+  }
+
+  .team {
+    .member {
+      .part-one {
+        flex-direction: column;
+
+        .pic {
+          width: 100%;
+          height: 8em;
+          border: 0px;
+          border-bottom: $border-size solid $dark-color;
+          background-position: center;
+
+          &.reverse {
+            border: 0px;
+            border-top: $border-size solid $dark-color;
+          }
+        }
+
+        .content,
+        .content.reverse {
+          padding: 0.5em;
+        }
       }
     }
   }
