@@ -1,0 +1,78 @@
+@import "./general.scss";
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .top {
+    background-color: white;
+    width: 100%;
+    border: $border-size solid $dark-color;
+    padding: 1em 2em;
+  }
+
+  .bottom {
+    display: flex;
+    width: 100%;
+
+    .left,
+    .right {
+      background-color: $light-color;
+      width: 25%;
+      border: $border-size solid $dark-color;
+      border-top: 0px;
+    }
+
+    .left {
+      background-image: url("../assets/contact.PNG");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .right {
+      background-image: url("../assets/textured-liquid-bg.JPG");
+      background-position: bottom left;
+    }
+
+    .center {
+      text-align: center;
+      background-color: $light-color;
+      background-image: url("../assets/bg-one.jpg");
+      background-size: 120%;
+      padding: 4em 0em;
+      width: 50%;
+      border-bottom: $border-size solid $dark-color;
+
+      p {
+        padding-top: 1em;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mobile-width) {
+  .contact {
+    .bottom {
+      flex-direction: column;
+
+      .left,
+      .center,
+      .right {
+        width: 100%;
+      }
+
+      .left,
+      .right {
+        height: 4em;
+      }
+
+      .center {
+        border-left: $border-size solid $dark-color;
+        border-right: $border-size solid $dark-color;
+      }
+    }
+  }
+}
