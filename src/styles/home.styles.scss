@@ -6,7 +6,7 @@
   align-items: center;
   background-image: url("../assets/textured-liquid-bg.JPG");
   background-attachment: fixed;
-  
+
   .container {
     background-color: $dark-color;
     border: 16px solid $light-color;
@@ -44,7 +44,7 @@
     background-image: url("../assets/textured-liquid-bg.JPG");
     background-attachment: fixed;
     height: 10em;
-    width: 100%;
+    width: cover;
     border: $border-size solid $dark-color;
     padding: 5em 0;
   }
@@ -53,13 +53,17 @@
     display: flex;
     height: fit-content;
 
-    .text{
+    .text {
       width: 60%;
     }
 
     .secpic {
       width: 40%;
-      background-image: url("../assets/bg.png");
+      background-color: $light-color;
+      background-image: url("../assets/boring.PNG");
+      background-size: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
       border: $border-size solid $dark-color;
       border-top: 0px;
     }
@@ -80,12 +84,17 @@
 
       .pic {
         width: 40%;
-        background-image: url("../assets/bg.png");
+        background-color: $light-color;
+        background-image: url("../assets/lola.PNG");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
         border-right: $border-size solid $dark-color;
 
         &.reverse {
           border-right: 0px;
           border-left: $border-size solid $dark-color;
+          background-image: url("../assets/sam.PNG");
         }
       }
 
@@ -124,19 +133,21 @@
       .text {
         text-align: start;
         padding-top: 16px;
+        overflow: hidden;
       }
     }
   }
 
-  .company{
-    .part{
+  .company {
+    .part {
       flex-direction: column;
 
-      .text, .secpic{
+      .text,
+      .secpic {
         width: 100%;
       }
 
-      .secpic{
+      .secpic {
         height: 16em;
         border-top: $border-size solid $dark-color;
       }

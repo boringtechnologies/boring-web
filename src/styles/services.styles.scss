@@ -59,13 +59,40 @@
         }
 
         .pic {
-          background-image: url("../assets/bg-one.jpg");
           width: 100%;
           border-left: $border-size solid $dark-color;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+          background-color: $light-color;
 
           &#left {
             border-right: $border-size solid $dark-color;
             border-left: 0px;
+          }
+
+          &.web {
+            &.one {
+              background-image: url("../assets/design.PNG");
+            }
+            &.two {
+              background-image: url("../assets/frontend.PNG");
+            }
+            &.three {
+              background-image: url("../assets/backend.PNG");
+            }
+          }
+
+          &.software {
+            &.one {
+              background-image: url("../assets/audio-video.PNG");
+            }
+            &.two {
+              background-image: url("../assets/cloud.PNG");
+            }
+            &.three {
+              background-image: url("../assets/open-source.PNG");
+            }
           }
         }
       }
@@ -128,7 +155,11 @@
       }
 
       .pic {
-        background-image: url("../assets/liquid-bg.JPG");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-color: $light-color;
+        background-image: url("../assets/contact.PNG");
         width: 40%;
         height: 100;
         border-right: $border-size solid $dark-color;

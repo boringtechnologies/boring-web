@@ -44,10 +44,10 @@ function Softwarepage() {
                 processing applications.
               </p>
             </div>
-            <div className="pic"></div>
+            <div className="pic software one"></div>
           </li>
           <li>
-            <div className="pic" id="left"></div>
+            <div className="pic web three" id="left"></div>
             <div className="text" id="left">
               <p className="big" data-aos="fade-left">
                 Backend Development:
@@ -70,10 +70,10 @@ function Softwarepage() {
                 can help you with deployment and management.
               </p>
             </div>
-            <div className="pic"></div>
+            <div className="pic software two"></div>
           </li>
           <li>
-            <div className="pic" id="left"></div>
+            <div className="pic software three" id="left"></div>
             <div className="text" id="left">
               <p className="big" data-aos="fade-left">
                 Open Source Frameworks:

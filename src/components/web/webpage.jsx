@@ -49,10 +49,10 @@ function Webpage() {
                 illustrations that will make your site stand out.
               </p>
             </div>
-            <div className="pic"></div>
+            <div className="pic web one"></div>
           </li>
           <li>
-            <div className="pic" id="left"></div>
+            <div className="pic web two" id="left"></div>
             <div className="text" id="left">
               <p className="big" data-aos="fade-left">
                 Frontend Development:
@@ -84,7 +84,7 @@ function Webpage() {
                 running smoothly and securely.
               </p>
             </div>
-            <div className="pic"></div>
+            <div className="pic web three"></div>
           </li>
         </ul>
       </div>

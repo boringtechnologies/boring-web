@@ -13,7 +13,7 @@ const Navbar = () => {
   return (
     <>
       <div className="navbar">
-        <Link className="logo" to="/"></Link>
+        <Link className="logo big" to="/">BORING TECHNOLOGIES</Link>
         <div className="burger">
           <Burger />
         </div>

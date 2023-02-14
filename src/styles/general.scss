@@ -68,6 +68,11 @@ li {
 }
 
 @media screen and (max-width: $mobile-width) {
+  *,
+  html {
+    overflow-x: hidden;
+  }
+
   h1,
   .big {
     font-size: 40px;
