@@ -6,6 +6,7 @@
   align-items: center;
   background-image: url("../assets/textured-liquid-bg.JPG");
   background-attachment: fixed;
+  border-bottom: $border-size solid $dark-color;
 
   .container {
     background-color: $dark-color;

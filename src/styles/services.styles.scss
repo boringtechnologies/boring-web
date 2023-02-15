@@ -151,6 +151,31 @@
               background-color: $light-color;
             }
           }
+
+          .arrow {
+            position: relative;
+            height: 0px;
+            width: 0px;
+            border: 24px solid;
+            border-color: $light-color $light-color transparent transparent;
+            transform: rotate(45deg);
+
+            &::before {
+              content: "";
+              position: absolute;
+              top: 0px;
+              right: 0px;
+              display: block;
+              height: 24px;
+              width: 24px;
+              background-color: $light-color;
+              transform: rotate(-45deg) translate(2px, 1px);
+            }
+
+            &.right {
+              transform: rotate(225deg);
+            }
+          }
         }
       }
 

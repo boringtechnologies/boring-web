@@ -102,11 +102,11 @@ function Softwarepage() {
               your business to the next level.
             </p>
             <div className="button">
-              <p className="web-only">here</p>
+              <span className="web-only arrow"></span>
               <Link to="/contact" id="name">
                 <button>Tell Us More</button>
               </Link>
-              <p className="web-only">here</p>
+              <span className="web-only arrow right"></span>
             </div>
           </div>
           <div className="pic right"></div>
