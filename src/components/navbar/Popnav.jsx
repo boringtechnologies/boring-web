@@ -1,4 +1,6 @@
-import { Link } from "react-router-dom";
+'use client'
+
+import Link from "next/link";
 import "./popnav.scss";
 
 /**
@@ -17,13 +19,13 @@ const Popnav = ({ open, setOpen }) => {
   return (
     <ul open={open} className={`popnavUl ${open ? "open" : "close"}`}>
       <li className="mobileOnly">
-        <Link to="/" className="navlinkStyle " onClick={() => handleClick()}>
+        <Link href="/" className="navlinkStyle " onClick={() => handleClick()}>
           HOME
         </Link>
       </li>
       <li>
         <Link
-          to="/service/web"
+          href="/service/web"
           className="navlinkStyle"
           onClick={() => handleClick()}
         >
@@ -32,7 +34,7 @@ const Popnav = ({ open, setOpen }) => {
       </li>
       <li>
         <Link
-          to="/service/software"
+          href="/service/software"
           className="navlinkStyle"
           onClick={() => handleClick()}
         >
@@ -41,7 +43,7 @@ const Popnav = ({ open, setOpen }) => {
       </li>
       <li>
         <Link
-          to="/contact"
+          href="/contact"
           className="navlinkStyle"
           onClick={() => handleClick()}
         >

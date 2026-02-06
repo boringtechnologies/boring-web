@@ -1,7 +1,9 @@
+'use client'
+
 import Aos from "aos";
 import "aos/dist/aos.css";
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import "../../styles/services.styles.scss";
 
 function Softwarepage() {
@@ -95,7 +97,7 @@ function Softwarepage() {
               is to help you build efficient and reliable software that meets
               your needs. We pride ourselves on delivering high-quality software
               on time and on budget.{" "}
-              <Link to="/contact" id="name">
+              <Link href="/contact" id="name">
                 Contact us
               </Link>{" "}
               today to discuss your project and see how we can help you take
@@ -103,7 +105,7 @@ function Softwarepage() {
             </p>
             <div className="button">
               <span className="web-only arrow"></span>
-              <Link to="/contact" id="name">
+              <Link href="/contact" id="name">
                 <button>Tell Us More</button>
               </Link>
               <span className="web-only arrow right"></span>

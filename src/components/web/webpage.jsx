@@ -1,7 +1,9 @@
+'use client'
+
 import Aos from "aos";
 import "aos/dist/aos.css";
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import "../../styles/services.styles.scss";
 
 function Webpage() {
@@ -96,14 +98,14 @@ function Webpage() {
               At <span className="medium">Boring Technologies</span>, we pride
               ourselves on creating high-quality websites that will help you
               achieve your business goals.{" "}
-              <Link to="/contact" id="name">
+              <Link href="/contact" id="name">
                 Contact us
               </Link>{" "}
               today to start building your dream website!
             </p>
             <div className="button">
               <span className="web-only arrow"></span>
-              <Link to="/contact" id="name">
+              <Link href="/contact" id="name">
                 <button>Tell Us More</button>
               </Link>
               <span className="web-only arrow right"></span>
