@@ -1,3 +1,5 @@
+'use client'
+
 import React, {useEffect} from "react";
 import "../../styles/home.styles.scss";
 import Aos from "aos";

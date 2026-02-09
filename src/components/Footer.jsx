@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import "../styles/footer.styles.scss";
 
 function Footer() {
@@ -11,7 +11,7 @@ function Footer() {
           specializes in creating innovative and efficient solutions for
           businesses and individuals.
         </p>
-        <Link className="link medium" to={"/contact"}>
+        <Link className="link medium" href={"/contact"}>
           Contact Us
         </Link>
       </div>
