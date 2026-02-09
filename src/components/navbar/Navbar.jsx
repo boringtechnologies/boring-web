@@ -1,4 +1,6 @@
-import { Link } from "react-router-dom";
+'use client'
+
+import Link from "next/link";
 import Burger from "./Burger.jsx";
 import "./navbar.scss";
 
@@ -13,7 +15,7 @@ const Navbar = () => {
   return (
     <>
       <div className="navbar">
-        <Link className="logo big" to="/">BORING TECHNOLOGIES</Link>
+        <Link className="logo big" href="/">BORING TECHNOLOGIES</Link>
         <div className="burger">
           <Burger />
         </div>
