@@ -1,123 +1,167 @@
 @import "./general.scss";
 
-.modal-overlay {
+.project-maincontainer {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.75);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 200;
-  padding: 1em;
 
-  .modal-content {
-    background-color: $light-color;
-    border: $border-size solid $dark-color;
-    max-width: 800px;
+  .clickable {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    max-height: 90vh;
-    overflow-y: auto;
-    position: relative;
-    padding: 2em;
+    height: 100%;
+    background-color: $dark-color;
+    opacity: 0.5;
+    z-index: 1;
+  }
 
-    h2 {
-      font-size: 3vw;
-      margin-bottom: 1em;
-      padding-right: 2em;
-    }
+  .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: $dark-color;
+    border: 8px solid $light-color;
+    color: $light-color;
 
-    .modal-close {
-      position: absolute;
-      top: 1em;
-      right: 1em;
+    .carousel-root {
+      width: 60%;
+      text-align: center;
+      border-right: $border-size solid $dark-color;
       background-color: $dark-color;
-      color: $light-color;
-      border: none;
-      font-size: 20px;
-      width: 40px;
-      height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      font-family: "Roboto-reg";
+      border-right: 8px solid $light-color;
 
-      &:hover {
-        background-color: $light-color;
-        color: $dark-color;
-        border: $border-size solid $dark-color;
+      .control-dots {
+        display: none;
       }
     }
 
-    .modal-carousel {
-      border: $border-size solid $dark-color;
-      margin-bottom: 1.5em;
+    .text {
+      width: 40%;
 
-      .carousel-slide {
-        img {
-          width: 100%;
-          max-height: 400px;
-          object-fit: cover;
+      h2 {
+        padding-left: 8px;
+      }
+
+      .description {
+        padding-left: 8px;
+        width: 100%;
+
+        li {
+          list-style: none;
         }
       }
-    }
 
-    .modal-description {
-      margin-bottom: 1.5em;
-      border: $border-size solid $dark-color;
-      padding: 1em;
-      background-color: white;
-    }
+      .technologies {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
 
-    .modal-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5em;
-      margin-bottom: 1.5em;
-    }
+        li {
+          list-style: none;
+          border: 4px solid $light-color;
+          padding: 2px 8px;
+          margin: 8px;
 
-    .modal-links {
-      display: flex;
-      gap: 1em;
+          p {
+            font-size: 24px;
+          }
+        }
+      }
 
-      .modal-link {
-        background-color: $dark-color;
-        color: $light-color;
-        text-decoration: none;
-        padding: 0.5em 1em;
-        border: $border-size solid $dark-color;
-        font-family: "Roboto-reg";
-        font-size: 18px;
+      .link-btn {
+        font-size: 32px;
+        padding: 4px 8px;
+        margin: 8px;
+        background-color: $light-color;
+        border: 8px solid $light-color;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        a {
+          color: $dark-color;
+          text-decoration: none;
+          padding: 0px 8px;
+        }
+
+        .arrow {
+          position: relative;
+          height: 0px;
+          width: 0px;
+          border: 12px solid;
+          border-color: $dark-color $dark-color transparent transparent;
+          transform: rotate(45deg);
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            display: block;
+            height: 12px;
+            width: 12px;
+            background-color: $dark-color;
+            transform: rotate(-45deg) translate(2px, 1px);
+          }
+
+          &.right {
+            transform: rotate(225deg);
+          }
+        }
 
         &:hover {
-          background-color: $light-color;
-          color: $dark-color;
+          cursor: pointer;
+          background-color: $dark-color;
+
+          a {
+            color: $light-color;
+          }
+
+          .arrow {
+            border-color: $light-color $light-color transparent transparent;
+
+            &::before {
+              background-color: $light-color;
+            }
+          }
         }
       }
-    }
-
-    .tag {
-      background-color: $dark-color;
-      color: $light-color;
-      padding: 0.2em 0.6em;
-      font-family: "Roboto-reg";
-      font-size: 16px;
     }
   }
 }
 
 @media screen and (max-width: $mobile-width) {
-  .modal-overlay {
-    padding: 0.5em;
+  .project-maincontainer {
+    .content {
+      flex-direction: column;
 
-    .modal-content {
-      padding: 1em;
+      .carousel-root {
+        border-bottom: 8px solid $light-color;
+      }
 
-      h2 {
-        font-size: 24px;
+      .carousel-root,
+      .text {
+        width: 100%;
+        border-right: 0px;
+
+        .link-btn {
+          border-width: 12px;
+
+          a {
+            font-size: 20px;
+          }
+        }
       }
     }
   }

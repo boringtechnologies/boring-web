@@ -1,75 +1,50 @@
 'use client'
 
-import React, { useEffect } from 'react'
-import { Carousel } from 'react-responsive-carousel'
-import 'react-responsive-carousel/lib/styles/carousel.min.css'
-import '../../styles/projectDetails.scss'
+import React from "react";
+import { Carousel } from "react-responsive-carousel";
+import "../../styles/projectDetails.scss";
 
-const ProjectDetails = ({ project, onClose }) => {
-  useEffect(() => {
-    const handleKeyDown = (e) => {
-      if (e.key === 'Escape') onClose()
-    }
-    document.addEventListener('keydown', handleKeyDown)
-    return () => document.removeEventListener('keydown', handleKeyDown)
-  }, [onClose])
-
+const ProjectDetails = ({ project, setOpen }) => {
   return (
-    <div className="modal-overlay" onClick={onClose}>
-      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-        <button className="modal-close" onClick={onClose} aria-label="Close modal">
-          ✕
-        </button>
-        <h2>{project.title}</h2>
-        <div className="modal-carousel">
-          <Carousel
-            showThumbs={false}
-            showStatus={false}
-            infiniteLoop={true}
-            useKeyboardArrows={true}
-          >
-            {project.images.map((img, index) => (
-              <div key={index} className="carousel-slide">
-                <img src={img} alt={`${project.title} screenshot ${index + 1}`} />
-              </div>
-            ))}
-          </Carousel>
-        </div>
-        <p className="modal-description">{project.description}</p>
-        <div className="modal-tags">
-          {project.tags.map((tag) => (
-            <span key={tag} className="tag">
-              {tag}
-            </span>
+    <div className="project-maincontainer">
+      <div className="clickable" onClick={() => setOpen(false)}></div>
+      <div className="content">
+        <Carousel>
+          {project.images.map((src, index) => (
+            <img src={src.src} alt="" key={index} />
           ))}
+        </Carousel>
+        <div className="text">
+          <h2>{project.title ? project.title : ""}</h2>
+          <ul className="description">
+            {project.description.map((detail) => (
+              <li key={detail}>
+                <p>▣ {detail}</p>
+              </li>
+            ))}
+          </ul>
+          <ul className="technologies">
+            {project.techs.map((tech) => (
+              <li key={tech}>
+                <p>{tech}</p>
+              </li>
+            ))}
+          </ul>
+          {project.link ? (
+            <button className="link-btn">
+              <span className="arrow"></span>
+              <a href={project.link} target="_blank" rel="noopener noreferrer">
+                Visit website
+              </a>
+              <span className="arrow right"></span>
+            </button>
+          ) : (
+            ""
+          )}
         </div>
-        {(project.url || project.github) && (
-          <div className="modal-links">
-            {project.url && (
-              <a
-                href={project.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="modal-link"
-              >
-                Visit Site
-              </a>
-            )}
-            {project.github && (
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="modal-link"
-              >
-                GitHub
-              </a>
-            )}
-          </div>
-        )}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ProjectDetails
+export default ProjectDetails;
