@@ -1,0 +1,124 @@
+@import "./general.scss";
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+  padding: 1em;
+
+  .modal-content {
+    background-color: $light-color;
+    border: $border-size solid $dark-color;
+    max-width: 800px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    padding: 2em;
+
+    h2 {
+      font-size: 3vw;
+      margin-bottom: 1em;
+      padding-right: 2em;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 1em;
+      right: 1em;
+      background-color: $dark-color;
+      color: $light-color;
+      border: none;
+      font-size: 20px;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-family: "Roboto-reg";
+
+      &:hover {
+        background-color: $light-color;
+        color: $dark-color;
+        border: $border-size solid $dark-color;
+      }
+    }
+
+    .modal-carousel {
+      border: $border-size solid $dark-color;
+      margin-bottom: 1.5em;
+
+      .carousel-slide {
+        img {
+          width: 100%;
+          max-height: 400px;
+          object-fit: cover;
+        }
+      }
+    }
+
+    .modal-description {
+      margin-bottom: 1.5em;
+      border: $border-size solid $dark-color;
+      padding: 1em;
+      background-color: white;
+    }
+
+    .modal-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5em;
+      margin-bottom: 1.5em;
+    }
+
+    .modal-links {
+      display: flex;
+      gap: 1em;
+
+      .modal-link {
+        background-color: $dark-color;
+        color: $light-color;
+        text-decoration: none;
+        padding: 0.5em 1em;
+        border: $border-size solid $dark-color;
+        font-family: "Roboto-reg";
+        font-size: 18px;
+
+        &:hover {
+          background-color: $light-color;
+          color: $dark-color;
+        }
+      }
+    }
+
+    .tag {
+      background-color: $dark-color;
+      color: $light-color;
+      padding: 0.2em 0.6em;
+      font-family: "Roboto-reg";
+      font-size: 16px;
+    }
+  }
+}
+
+@media screen and (max-width: $mobile-width) {
+  .modal-overlay {
+    padding: 0.5em;
+
+    .modal-content {
+      padding: 1em;
+
+      h2 {
+        font-size: 24px;
+      }
+    }
+  }
+}

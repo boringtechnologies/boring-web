@@ -1,0 +1,87 @@
+@import "./general.scss";
+
+.portfolio {
+  background-image: url("../assets/bg-one.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+
+  .portfolio-header {
+    padding: 80px 0 2em 0;
+    border-bottom: $border-size solid $dark-color;
+
+    h1 {
+      padding-bottom: 0.25em;
+    }
+
+    p {
+      font-family: "Roboto-reg";
+    }
+  }
+
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $border-size;
+    margin-top: 2em;
+
+    .portfolio-item {
+      border: $border-size solid $dark-color;
+      background-color: $light-color;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+
+      &:hover {
+        transform: scale(1.02);
+      }
+
+      .portfolio-item-img {
+        width: 100%;
+        height: 240px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: $dark-color;
+        border-bottom: $border-size solid $dark-color;
+      }
+
+      .portfolio-item-info {
+        padding: 1em;
+
+        h2 {
+          font-size: 2vw;
+          margin-bottom: 0.5em;
+        }
+
+        .portfolio-item-tags {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.5em;
+        }
+      }
+    }
+  }
+
+  .tag {
+    background-color: $dark-color;
+    color: $light-color;
+    padding: 0.2em 0.6em;
+    font-family: "Roboto-reg";
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: $mobile-width) {
+  .portfolio {
+    .portfolio-grid {
+      grid-template-columns: 1fr;
+
+      .portfolio-item {
+        .portfolio-item-info {
+          h2 {
+            font-size: 24px;
+          }
+        }
+      }
+    }
+  }
+}
