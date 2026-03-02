@@ -43,6 +43,15 @@ const Popnav = ({ open, setOpen }) => {
       </li>
       <li>
         <Link
+          href="/portfolio"
+          className="navlinkStyle"
+          onClick={() => handleClick()}
+        >
+          PORTFOLIO
+        </Link>
+      </li>
+      <li id="last">
+        <Link
           href="/contact"
           className="navlinkStyle"
           onClick={() => handleClick()}

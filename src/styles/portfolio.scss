@@ -1,0 +1,159 @@
+@import "./general.scss";
+
+.portfolio {
+  .first {
+    background-image: url("../assets/textured-liquid-bg.JPG");
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border-bottom: $border-size solid $dark-color;
+
+    h1,
+    .intro {
+      background-color: $light-color;
+      border: 16px solid white;
+      margin: 40px 16px;
+      padding: 16px 8px;
+    }
+  }
+
+  .projects {
+    background-color: $light-color;
+    background-image: url("../assets/bg-one.jpg");
+    background-size: 100% auto;
+    background-attachment: fixed;
+
+    ul {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+
+      .project {
+        width: 48vw;
+        height: 40vh;
+        list-style: none;
+        position: relative;
+        overflow: hidden;
+        border: 8px solid $light-color;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          transition: width 1s ease-in-out, height 1s ease-in-out;
+        }
+
+        .onhover {
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          z-index: 2;
+
+          button {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transform: translateY(100%);
+            transition: transform 1s ease;
+            border: 8px solid $dark-color;
+            padding: 8px;
+
+            span.small-text {
+              font-size: 24px;
+              width: 100%;
+              text-align: start;
+            }
+
+            &:hover {
+              cursor: pointer;
+              background-color: $dark-color;
+              color: $light-color;
+              border-color: $light-color;
+            }
+          }
+        }
+
+        .gradient {
+          position: absolute;
+          top: 72%;
+          left: 0;
+          background: linear-gradient(to top, $dark-color, transparent);
+          height: 100%;
+          width: 100%;
+          z-index: 0;
+          transition: top 1s ease;
+        }
+
+        &.can-hover {
+          &:hover {
+            img {
+              width: 150%;
+              height: 150%;
+              transition: width 1s ease-in-out, height 1s ease-in-out;
+            }
+
+            .onhover {
+              button {
+                display: flex;
+                transform: translateY(0%);
+                transition: transform 1s ease;
+                transition-delay: 0.3s;
+              }
+            }
+
+            .gradient {
+              top: 0%;
+              transition: top 1s ease;
+            }
+          }
+        }
+
+        &.cannot-hover {
+          .onhover,
+          .gradient {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mobile-width) {
+  .portfolio {
+    .projects {
+      ul {
+        .project {
+          width: 90vw;
+          height: 30vh;
+
+          .onhover {
+            button {
+              transform: translateY(0%);
+            }
+          }
+
+          .gradient {
+            top: 0%;
+          }
+
+          &.cannot-hover {
+            .onhover {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
